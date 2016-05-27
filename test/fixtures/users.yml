@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  mail: MyString
+  birth_date: 2016-05-27
+  tel: 
+  return_rate: 
+  recommendation_rate: 
+  suggestions: MyString
+
+two:
+  name: MyString
+  mail: MyString
+  birth_date: 2016-05-27
+  tel: 
+  return_rate: 
+  recommendation_rate: 
+  suggestions: MyString

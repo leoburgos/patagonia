@@ -1,0 +1,10 @@
+I"¸(function() {
+  $(document).ready(function() {
+    $('.date-picker').datepicker();
+    return $('.form-control').click(function() {
+      return disable;
+    });
+  });
+
+}).call(this);
+:ET

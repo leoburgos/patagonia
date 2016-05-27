@@ -1,0 +1,66 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="user-form">
+    <ul>
+      <li>
+        <span class="title">
+        <%= f.text_field :name, placeholder: "Nombre", class: 'form-control' , required: true%>
+        </span>
+      </li>
+      <li>
+        <span class="title">
+        <%= f.text_field :mail, placeholder: "Mail" , class: 'form-control', required: true%>
+        </span>
+      </li>
+      <li>
+        <span class="title">
+        <%= f.text_field :birth_date , placeholder: "Fecha de Nacimiento", class: 'form-control date-picker', required: true%>
+        </span>
+      </li>
+      <li>
+        <span class="title">
+        <%= f.text_field :tel, placeholder: "Cel/Tel" , class: 'form-control', required: true%>
+        </span>
+      </li>
+      <li>
+        <label class="form-label">¿Volverías a Patagonia Bewing Co.? </label><span class="title">
+        <%= f.text_field :return_rate , required: true, class: 'form-control hidden' %>
+        </span>
+      </li>
+      <li>
+        <label class="form-label">¿Recomendarías Patagonia Bewing Co. a un amigo/a?</label>
+        <div class="options-box">
+        <span class="form-control option" id="rec_0">0</span>
+        <span class="form-control option" id="rec_1">1</span>
+        <span class="form-control option" id="rec_2">2</span>
+        <span class="form-control option" id="rec_3">3</span>
+        <span class="form-control option" id="rec_4">4</span>
+        <span class="form-control option" id="rec_5">5</span>
+        <%= f.text_field :recommendation_rate , required: true, class: 'form-control hidden' %>
+        </div>
+      </li>
+      <li>
+        <span class="title">
+        <%= f.text_area :suggestions, placeholder: "Sugerencias..." , class: 'form-control'%>
+        </span>
+      </li>
+    </ul>
+
+
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+</div>
+<% end %>
+

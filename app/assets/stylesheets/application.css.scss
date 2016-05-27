@@ -1,0 +1,106 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+body{
+  background-image: asset_data_url("patagonia_landing_fondo.jpg");
+  background-repeat: no-repeat;
+  margin-top: 1%;
+}
+
+label, .form-control, .form-control::-webkit-input-placeholder, .message{
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-variant: normal;
+}
+
+label{
+  font-weight: normal;
+}
+
+.header-logo{
+  height: 180px;
+  background-image: asset_data_url("logo_patagonia.png");
+}
+.footer-logo{
+  height: 300px;
+  background-image: asset_data_url("img_lupulo.png");
+}
+
+.footer-logo, .header-logo{
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.user-form{
+  padding: 0;
+}
+
+ul{
+  padding: 0;
+}
+
+.header-logo{
+  margin-left: 22%;
+}
+
+hr{
+  border-top: 1px solid #E3A73A;
+  width: 30%;
+}
+
+.user-form li{
+  margin: 10px;
+}
+
+.form-control{
+  border-radius: 0px!important;
+  -moz-transition: none;
+  -webkit-transition: none;
+  transition: none;
+  background-color: rgba(186, 240, 220, 0.4);
+  color: white;
+}
+
+.form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    white;
+}
+
+.form-label{
+  color: white;
+  width: 50%;
+  margin-right: 5%;
+}
+
+.message{
+  font-weight: bolder;
+  color:white;
+  display: inline-block;
+}
+
+.option{
+  width: 13.9%;
+  display: inline-block;
+  margin:0.7%;
+}
+
+.options-box{
+  width: 45%;
+  float:right;
+}
