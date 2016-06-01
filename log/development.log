@@ -8038,3 +8038,16 @@ Processing by UsersController#new as HTML
   Rendered users/_form.html.erb (2.8ms)
   Rendered users/new.html.erb within layouts/application (3.4ms)
 Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-01 02:44:05 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1973ms (Views: 1972.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-88f242f84a3a9ccb0886f7c3c3b13aa0ee9c95d09982aebb019be379525f611c.css?body=1" for 127.0.0.1 at 2016-06-01 02:44:07 -0300
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-06-01 02:44:07 -0300

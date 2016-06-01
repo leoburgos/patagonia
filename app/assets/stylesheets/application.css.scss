@@ -208,6 +208,10 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   background-color: #DEAA45;
 }
 
+td span{
+  color: black!important;
+}
+
 @media screen and (max-width: 1280px) {
   .option{
     margin:0.7%;
