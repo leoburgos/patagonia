@@ -21,13 +21,29 @@
 body{
   background-image: asset_data_url("patagonia_landing_fondo.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   margin-top: 1%;
 }
 
-label, .form-control, .form-control::-webkit-input-placeholder, .message{
+h2, a, input, span, label, .form-control, .form-control::-webkit-input-placeholder, .message{
   font-family: 'Open Sans';
   font-style: normal;
   font-variant: normal;
+  color: white!important;
+}
+
+h2{
+  font-weight: bold;
+}
+.cancel-links{
+  display: block;
+  height: 50px;
+  width: 50px;
+  margin-top: 3.5%;
+  margin-right: 3.5%;
+}
+.cancel-links:hover{
+  background-color: transparent;
 }
 
 label{
@@ -37,6 +53,7 @@ label{
 .header-logo{
   height: 180px;
   background-image: asset_data_url("logo_patagonia.png");
+  padding-left: 0px!important;
 }
 .footer-logo{
   height: 300px;
@@ -66,7 +83,7 @@ hr{
 }
 
 .user-form li{
-  margin: 10px;
+  margin: 12px;
 }
 
 .form-control{
@@ -84,8 +101,7 @@ hr{
 
 .form-label{
   color: white;
-  width: 50%;
-  margin-right: 5%;
+  width: 48%;
 }
 
 .message{
@@ -94,13 +110,106 @@ hr{
   display: inline-block;
 }
 
+.medium-message{
+  font-size: 18px;
+}
+
 .option{
   width: 13.9%;
   display: inline-block;
-  margin:0.7%;
+  margin:0.8%;
+}
+
+.option-date{
+  width: 13.9%;
+  display: inline-block;
+  margin:0.8%;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 26px;
 }
 
 .options-box{
-  width: 45%;
-  float:right;
+  width: 48%;
+  display: inline-block;
+}
+
+.suggestings{
+  margin-top: 3%;
+}
+
+.options-li{
+  height: 60px;
+}
+
+.send-button{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 17px;
+  padding-right: 17px;
+  background-color: #DEAA45;
+  border: none;
+  margin-top: 1%;
+}
+
+.instagram, .facebook {
+  display: block;
+  height: 40px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 53%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+.instagram{
+  background-image: asset_data_url("Instagram.png");
+}
+
+.modal-content{
+  background-image: asset_data_url("patagonia_gracias.jpg");
+  height: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.facebook{
+  height: 30px!important;
+  background-image: asset_data_url("facebook.png");
+  width: 48%!important;
+  margin-top: 2px;
+}
+.facebook:hover,.instagram:hover{
+    background-color: transparent;
+  }
+
+ .span-link {
+   vertical-align: top;
+   margin-top: 5px;
+   display: inline-block;
+ }
+
+ li{
+   list-style-type: none;
+ }
+
+ .active{
+   background-color: #00B36E;
+ }
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgb(74, 119, 100) inset!important;
+  -webkit-text-fill-color: white !important;
+}
+
+.send-button:hover{
+  background-color: #DEAA45;
+}
+
+@media screen and (max-width: 1280px) {
+  .option{
+    margin:0.7%;
+  }
 }

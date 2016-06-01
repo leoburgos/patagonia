@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  get '/users/user_modal', to: 'users#user_modal', as: 'user_modal'
   resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -54,5 +56,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root to: 'users#new'
+  root to: 'users#index'
 end

@@ -1,0 +1,14 @@
+/**
+ * Created by leo on 09/09/15.
+ */
+
+
+if ($('#new_user')[0].checkValidity()){
+    $('#modal-div').html("<%= escape_javascript(render :partial => 'users/new_client_modal') %>");
+    $('#user_modal_link').click();
+    $('#new_user').find(':submit').click();
+    $('#new_user').hide();
+} else{
+    $('#new_user').find(':submit').click();
+}
+

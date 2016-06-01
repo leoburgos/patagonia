@@ -1,0 +1,21 @@
+I"R(function() {
+  $(document).ready(function() {
+    $('.date-picker').datepicker();
+    $('.box1 .option').click(function() {
+      if (!($(this).hasClass('active'))) {
+        $('.option').removeClass('active');
+        $(this).addClass('active');
+      }
+      return $('#user_return_rate').val($(this).val());
+    });
+    return $('.box2 .option').click(function() {
+      if (!($(this).hasClass('active'))) {
+        $('.option').removeClass('active');
+        $(this).addClass('active');
+      }
+      return $('#user_recommendation_rate').val($(this).val());
+    });
+  });
+
+}).call(this);
+:ET

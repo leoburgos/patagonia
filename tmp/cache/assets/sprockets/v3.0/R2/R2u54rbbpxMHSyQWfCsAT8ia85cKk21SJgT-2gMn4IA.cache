@@ -1,0 +1,19 @@
+I"æ(function() {
+  $(document).ready(function() {
+    $('.date-picker').datepicker();
+    $('box1 .option').click(function() {
+      if (!($(this).hasClass('active'))) {
+        $('.option').removeClass('active');
+        return $(this).addClass('active');
+      }
+    });
+    return $('box2 .option').click(function() {
+      if (!($(this).hasClass('active'))) {
+        $('.option').removeClass('active');
+        return $(this).addClass('active');
+      }
+    });
+  });
+
+}).call(this);
+:ET

@@ -1,39 +1,64 @@
-<p id="notice"><%= notice %></p>
+<div class="container col-sm-offset-4 col-sm-4" style="text-align: center">
+  <div class="row" style="text-align: center">
+    <div class="col-sm-7 header-logo">
+    </div>
+  </div>
+  <hr>
+  <h2 class="big-message" style="margin-top: 6%">INGRESÁ TU FECHA </h2>
+  <h2 class="big-message">DE NACIMIENTO </h2>
+</br>
+  <span class="medium-message">necesitamos confirmar tu edad</span>
 
-<h1>Listing Users</h1>
+  <div class="row" style="margin-top: 6%">
+    <form id="date-form">
+        <input class="form-control option-date" id="day" placeholder="Día" required="required"/>
+        <input class="form-control option-date" id="month" placeholder="Mes" required="required"/>
+        <input class="form-control option-date" id="year" placeholder="Año" required="required"/>
+      <button type="submit" class="hidden"></button>
+    </form>
+  </div>
+  <div class="row" style="text-align: center; margin-top: 4%; margin-bottom: 7%">
+    <a type="button" href=<%= new_user_path() %> class="send-button">Enviar</a>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4 footer-logo">
+    </div>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Mail</th>
-      <th>Birth date</th>
-      <th>Tel</th>
-      <th>Return rate</th>
-      <th>Recommendation rate</th>
-      <th>Suggestions</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.mail %></td>
-        <td><%= user.birth_date %></td>
-        <td><%= user.tel %></td>
-        <td><%= user.return_rate %></td>
-        <td><%= user.recommendation_rate %></td>
-        <td><%= user.suggestions %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<script>
+  $(document).ready(function () {
+     $('body').css('background-color', 'black');
+     $('body').css('background-image', 'none');
 
-<br>
+      $('.send-button').click(function(){
+          if ($('#date-form')[0].checkValidity()) {
+              var day = $("#day").val();
+              var month = $("#month").val();
+              var year = $("#year").val();
+              var age = 18;
+              var mydate = new Date();
+              mydate.setFullYear(year, month - 1, day);
 
-<%= link_to 'New User', new_user_path %>
+              var currdate = new Date();
+              currdate.setFullYear(currdate.getFullYear() - age);
+              if ((currdate - mydate) < 0) {
+                  swal({
+                      title: "Error!",
+                      text: "Lo sentimos, este sitio es para mayores de edad.",
+                      type: "error",
+                      confirmButtonText: "Ok"
+                  });
+                  return false;
+              }
+          } else {
+              $('#date-form').find(':submit').click();
+              return false
+          }
+      });
+  });
+
+
+
+</script>
