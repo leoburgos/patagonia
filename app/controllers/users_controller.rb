@@ -14,7 +14,10 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
-    @notice = params[:notice]
+    if !session[:date].nil?
+      @user.birth_date= session[:date]
+      session[:date] = nil
+    end
   end
 
   # GET /users/1/edit
@@ -62,6 +65,11 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.js { render :user_modal }
     end
+  end
+
+  def set_date
+    session['date'] = params[:day] + '/' + params[:month] + '/' + params[:year]
+    render :index
   end
 
   private

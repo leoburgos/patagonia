@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/users/set_date', to: 'users#set_date', as: 'user_set_date'
   get '/users/user_modal', to: 'users#user_modal', as: 'user_modal'
   resources :users
 

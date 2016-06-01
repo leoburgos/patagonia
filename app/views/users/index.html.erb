@@ -18,7 +18,7 @@
     </form>
   </div>
   <div class="row" style="text-align: center; margin-top: 4%; margin-bottom: 7%">
-    <a type="button" href=<%= new_user_path() %> class="send-button">Enviar</a>
+    <a type="button" href='<%= new_user_path() %>' class="send-button">Enviar</a>
   </div>
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4 footer-logo">
@@ -32,7 +32,7 @@
      $('body').css('background-color', 'black');
      $('body').css('background-image', 'none');
 
-      $('.send-button').click(function(){
+      $('.send-button').click(function(e){
           if ($('#date-form')[0].checkValidity()) {
               var day = $("#day").val();
               var month = $("#month").val();
@@ -43,7 +43,7 @@
 
               var currdate = new Date();
               currdate.setFullYear(currdate.getFullYear() - age);
-              if ((currdate - mydate) < 0) {
+              if ((currdate - mydate) < 0 ) {
                   swal({
                       title: "Error!",
                       text: "Lo sentimos, este sitio es para mayores de edad.",
@@ -51,7 +51,22 @@
                       confirmButtonText: "Ok"
                   });
                   return false;
+              } else if (!((mydate.getFullYear() == year) && (mydate.getMonth() +1 == month) && (mydate.getDate() == day))){
+                  swal({
+                      title: "Error!",
+                      text: "Lo sentimos, la fecha ingresada no es correcta.",
+                      type: "error",
+                      confirmButtonText: "Ok"
+                  });
+                  return false;
               }
+              e.preventDefault();
+              $.ajax({
+                  url: '/users/set_date',
+                  data: { year: year, month: month, day: day }
+                  }).done(function(){
+                  window.location.replace("<%= new_user_path %>");
+              });
           } else {
               $('#date-form').find(':submit').click();
               return false
