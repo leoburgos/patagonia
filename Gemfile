@@ -36,6 +36,8 @@ gem 'bootstrap-sass'
 
 gem 'sprockets'
 
+gem 'sprockets_better_errors'
+
 gem 'rails_12factor', group: :production
 
 
