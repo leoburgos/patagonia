@@ -1697,6 +1697,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/zz/zzNSMQNR-1Cr0XQ06XGDPL7tZGasd80apyw0CQyH8cE.cache" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/patagonia.iml" afterPath="$PROJECT_DIR$/.idea/patagonia.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="patagonia.iws" />
