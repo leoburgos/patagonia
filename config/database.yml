@@ -83,5 +83,5 @@ test:
 production:
   <<: *default
   database: patagonia_production
-  username: patagonia
-  password: <%= ENV['PATAGONIA_DATABASE_PASSWORD'] %>
+  username: postgres
+  password: postgres
