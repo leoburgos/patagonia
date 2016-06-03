@@ -6,6 +6,7 @@ $(document).ready ->
   $('#user_return_rate').val('5')
   $('#user_recommendation_rate').val('5')
 
+
   $('.box1 .option').click ->
     if !($(this).hasClass('active'))
       $('.box1 .option').removeClass('active')
@@ -23,6 +24,7 @@ $(document).ready ->
   $(document).on 'click', '.cancel-links', ->
     $('#new_user').fadeIn();
     $('input:not(#user_recommendation_rate):not(#user_return_rate)').val('')
+    $('#user_suggestions').val('')
     return
 
   return

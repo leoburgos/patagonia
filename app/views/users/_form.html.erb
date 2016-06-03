@@ -15,16 +15,16 @@
 <div class="user-form" id="user-form">
     <ul>
       <li>
-        <%= f.text_field :name, placeholder: "Nombre", class: 'form-control'%>
+        <%= f.text_field :name, placeholder: "Nombre", class: 'form-control', required: true%>
       </li>
       <li>
         <%= f.text_field :mail, placeholder: "Mail" , class: 'form-control', required: true, type: 'email'%>
       </li>
       <li>
-        <%= f.text_field :birth_date , placeholder: "Fecha de Nacimiento", class: 'form-control date-picker'%>
+        <%= f.text_field :birth_date , placeholder: "Fecha de Nacimiento", class: 'form-control date-picker', required: true %>
       </li>
       <li>
-        <%= f.text_field :tel, placeholder: "Cel/Tel" , class: 'form-control', type: 'number' %>
+        <%= f.text_field :tel, placeholder: "Cel/Tel" , class: 'form-control', type: 'number', required: true %>
       </li>
       <li class="options-li">
         <label class="form-label">¿Volverías a Patagonia Bewing Co.? </label>

@@ -29,6 +29,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      bonus_code = BonusCode.first
+      body = bonus_code.code
+      users_to_report = [@user.mail]
+      ApplicationMailer.patagonia_bonus(users_to_report, body, 'Bar Patagonia').deliver_now!
+      bonus_code.code += 1
+      bonus_code.save
        redirect_to action: :new
     else
       respond_to do |format|
