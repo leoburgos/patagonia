@@ -1,1 +1,0 @@
-web: bin/rails server -p 11169 -e production
