@@ -1,1 +1,1 @@
-web: bin/proximo bundle exec puma -C config/puma.rb
+web: bin/proximo bundle exec rails server
