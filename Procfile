@@ -1,1 +1,1 @@
-web: bundle exec puma -p 3000 -e production
+web: bin/rails server -p 46921 -e production
