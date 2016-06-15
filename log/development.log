@@ -13508,3 +13508,27 @@ Started GET "/" for 127.0.0.1 at 2016-06-15 13:26:54 -0300
 Processing by UsersController#index as HTML
   Rendered users/index.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-15 13:30:08 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e7d111983a3564f25a52b8cf1621ad9a58da5bee2ae63b288002bfc5134ddf4e.css?body=1" for 127.0.0.1 at 2016-06-15 13:30:08 -0300
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-15 13:30:09 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-15 13:30:20 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.0ms)
