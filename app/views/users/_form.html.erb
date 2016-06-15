@@ -15,7 +15,7 @@
 <div class="user-form" id="user-form">
     <ul>
       <li>
-        <%= f.text_field :name, placeholder: "Nombre", class: 'form-control', required: true, style: "color:white"%>
+        <%= f.text_field :name, placeholder: "Nombre", class: 'form-control', required: true%>
       </li>
       <li>
         <%= f.text_field :mail, placeholder: "Mail" , class: 'form-control', required: true, type: 'email'%>
@@ -40,7 +40,7 @@
           </div>
             <div>
           <span>No probable</span>
-          <span class="pull-right">Muy probable</span>
+          <div class="pull-right">Muy probable</div>
         </div>
         </div>
 
