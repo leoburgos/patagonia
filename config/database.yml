@@ -82,7 +82,6 @@ test:
 #
 production:
   <<: *default
-  host: ec2-23-23-192-249.compute-1.amazonaws.com
-  database: d3bqppt8a7n8hk
-  username: uglvcxcbsisuek
-  password: 4CG_sRiXzD4nqF4NUatZGwT1DG
+  database: patagonia_production
+  username: patagonia
+  password: patagonia

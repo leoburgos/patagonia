@@ -3,7 +3,8 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
-
+  config.assets.paths << Rails.root.join("vendor", "assets", "images")
+  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
@@ -22,14 +23,16 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
-
+  #config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.serve_static_files = false #Al tener la gema rails_12factor en el gemfile es equivalente a tener esto en true.
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+
+
+  config.assets.compile = true #Para heroku tiene que estar esta variable en true
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
@@ -76,7 +79,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.action_mailer.default_url_options = { host: 'patagoniabar.herokuapp.com', port: 80 }
+  #configuracion para envio de mails
+  config.action_mailer.default_url_options = { host: '52.200.113.155', port: 80 }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       address: "smtp.gmail.com",
@@ -84,7 +88,7 @@ Rails.application.configure do
       domain: "gmail.com",
       authentication: "login",
       enable_starttls_auto: true,
-      user_name: ENV["GMAIL_USERNAME"],
-      password: ENV["GMAIL_PASSWORD"]
+      user_name: "patagoniabrewingcouy@gmail.com",
+      password: "brewingpatagoniacouy"
   }
 end
