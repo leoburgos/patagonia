@@ -13722,3 +13722,9 @@ Processing by UsersController#new as HTML
   Rendered users/_form.html.erb (1.9ms)
   Rendered users/new.html.erb within layouts/application (2.5ms)
 Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-15 20:17:55 -0300
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.0ms)
