@@ -15,7 +15,7 @@
 <div class="user-form" id="user-form">
     <ul>
       <li>
-        <%= f.text_field :name, placeholder: "Nombre", class: 'form-control', required: true%>
+        <%= f.text_field :name, placeholder: "Nombre", class: 'form-control', required: true, style: "color:white"%>
       </li>
       <li>
         <%= f.text_field :mail, placeholder: "Mail" , class: 'form-control', required: true, type: 'email'%>
@@ -66,7 +66,7 @@
 
       <button type="submit" class="hidden"></button>
       <div class="row" style="text-align: center; margin-top: 4%">
-        <a type="button" data-remote="true" href=<%= user_modal_path() %> class="send-button">Enviar</a>
+        <a type="button" data-remote="true" href=<%= user_modal_path() %> class="send-button" style="color:white">Enviar</a>
       </div>
 </div>
     <%= link_to '', '#', class: 'btn btn-danger', 'data-toggle' => 'modal', 'data-target' => '#user-modal', id: "user_modal_link", style: 'display:none;' %>
