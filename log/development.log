@@ -13696,3 +13696,10 @@ Processing by UsersController#new as HTML
   Rendered users/_form.html.erb (2.1ms)
   Rendered users/new.html.erb within layouts/application (2.6ms)
 Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-15 14:05:46 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.2ms)
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
