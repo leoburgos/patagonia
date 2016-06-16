@@ -10,7 +10,7 @@ class ApplicationMailer < ActionMailer::Base
   end
 
   def patagonia_users(user_emails, email_body, email_subject)
-    if Date.today.wday > 1
+    if Date.today.wday < 1
       users = User.all
       attachments['Clientes.xls'] = users.to_xls(:columns => [:name, :mail, :tel, :return_rate, :recommendation_rate, :suggestions, :birth_date, :created_at],
                                                :headers => ['Nombre', 'Mail', 'Teléfono', 'Volverías?', 'Recomendarías?', 'Sugerencias', 'Fecha de Nacimiento', 'Fecha de registro'])
