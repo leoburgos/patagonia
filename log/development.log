@@ -13744,3 +13744,68 @@ Processing by UsersController#new as HTML
   Rendered users/_form.html.erb (1.2ms)
   Rendered users/new.html.erb within layouts/application (1.8ms)
 Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. Use `#deliver_now!` to deliver immediately or `#deliver_later!` to deliver through Active Job. (called from block in <top (required)> at /home/leo/patagonia/lib/tasks/send_users_mail.rake:4)
+  [1m[36mUser Load (35.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+ApplicationMailer#patagonia_users: processed outbound mail in 276.3ms
+DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. Use `#deliver_now!` to deliver immediately or `#deliver_later!` to deliver through Active Job. (called from block in <top (required)> at /home/leo/patagonia/lib/tasks/send_users_mail.rake:4)
+
+ApplicationMailer#patagonia_users: processed outbound mail in 136.9ms
+DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. Use `#deliver_now!` to deliver immediately or `#deliver_later!` to deliver through Active Job. (called from block in <top (required)> at /home/leo/patagonia/lib/tasks/send_users_mail.rake:4)
+
+ApplicationMailer#patagonia_users: processed outbound mail in 138.3ms
+DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. Use `#deliver_now!` to deliver immediately or `#deliver_later!` to deliver through Active Job. (called from block in <top (required)> at /home/leo/patagonia/lib/tasks/send_users_mail.rake:4)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+ApplicationMailer#patagonia_users: processed outbound mail in 588.2ms
+DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. Use `#deliver_now!` to deliver immediately or `#deliver_later!` to deliver through Active Job. (called from block in <top (required)> at /home/leo/patagonia/lib/tasks/send_users_mail.rake:4)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered application_mailer/patagonia_users.html.erb (0.9ms)
+
+ApplicationMailer#patagonia_users: processed outbound mail in 434.5ms
+DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. Use `#deliver_now!` to deliver immediately or `#deliver_later!` to deliver through Active Job. (called from block in <top (required)> at /home/leo/patagonia/lib/tasks/send_users_mail.rake:4)
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered application_mailer/patagonia_users.html.erb (0.9ms)
+
+ApplicationMailer#patagonia_users: processed outbound mail in 417.7ms
+DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. Use `#deliver_now!` to deliver immediately or `#deliver_later!` to deliver through Active Job. (called from block in <top (required)> at /home/leo/patagonia/lib/tasks/send_users_mail.rake:4)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered application_mailer/patagonia_users.html.erb (1.1ms)
+
+ApplicationMailer#patagonia_users: processed outbound mail in 446.6ms
+DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. Use `#deliver_now!` to deliver immediately or `#deliver_later!` to deliver through Active Job. (called from block in <top (required)> at /home/leo/patagonia/lib/tasks/send_users_mail.rake:4)
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered application_mailer/patagonia_users.html.erb (0.9ms)
+
+ApplicationMailer#patagonia_users: processed outbound mail in 421.1ms
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users"
+DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. Use `#deliver_now!` to deliver immediately or `#deliver_later!` to deliver through Active Job. (called from block in <top (required)> at /home/leo/patagonia/lib/tasks/send_users_mail.rake:4)
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered application_mailer/patagonia_users.html.erb (1.0ms)
+
+ApplicationMailer#patagonia_users: processed outbound mail in 479.0ms
+DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. Use `#deliver_now!` to deliver immediately or `#deliver_later!` to deliver through Active Job. (called from block in <top (required)> at /home/leo/patagonia/lib/tasks/send_users_mail.rake:4)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users"
+  Rendered application_mailer/patagonia_users.html.erb (1.0ms)
+
+ApplicationMailer#patagonia_users: processed outbound mail in 456.8ms
+DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. Use `#deliver_now!` to deliver immediately or `#deliver_later!` to deliver through Active Job. (called from block in <top (required)> at /home/leo/patagonia/lib/tasks/send_users_mail.rake:4)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered application_mailer/patagonia_users.html.erb (1.0ms)
+
+ApplicationMailer#patagonia_users: processed outbound mail in 454.3ms
+DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. Use `#deliver_now!` to deliver immediately or `#deliver_later!` to deliver through Active Job. (called from block in <top (required)> at /home/leo/patagonia/lib/tasks/send_users_mail.rake:4)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered application_mailer/patagonia_users.html.erb (1.0ms)
+
+ApplicationMailer#patagonia_users: processed outbound mail in 408.0ms
+DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. Use `#deliver_now!` to deliver immediately or `#deliver_later!` to deliver through Active Job. (called from block in <top (required)> at /home/leo/patagonia/lib/tasks/send_users_mail.rake:4)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered application_mailer/patagonia_users.html.erb (1.0ms)
+
+ApplicationMailer#patagonia_users: processed outbound mail in 407.3ms

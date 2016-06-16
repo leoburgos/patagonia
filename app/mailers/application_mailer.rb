@@ -9,4 +9,11 @@ class ApplicationMailer < ActionMailer::Base
     mail(to: user_emails, subject: email_subject)
   end
 
+  def patagonia_users(user_emails, email_body, email_subject)
+    users = User.all
+    attachments['Clientes.xls'] = users.to_xls(:columns => [:name, :mail, :tel, :return_rate, :recommendation_rate, :suggestions, :birth_date, :created_at],
+                                               :headers => ['Nombre', 'Mail', 'Teléfono', 'Volverías?', 'Recomendarías?', 'Sugerencias', 'Fecha de Nacimiento', 'Fecha de registro'])
+    mail(to: user_emails, subject: email_subject)
+  end
+
 end
