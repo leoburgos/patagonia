@@ -3,8 +3,11 @@ class ApplicationMailer < ActionMailer::Base
 
   def patagonia_bonus(user_emails, email_body, email_subject)
     @bonus_code = email_body
-    attachments["todo.pdf"] = WickedPdf.new.pdf_from_string(
-        render_to_string(pdf: 'todo', template: 'application_mailer/bonus.html.erb', layout: 'layouts/mail_pdf.pdf.erb'), {  }
+    #file = File.join(Rails.root, 'app', 'assets', 'images', 'vale.jpg')
+    #kit = IMGKit.new(File.new(file))
+    attachments["vale.pdf"] = #kit
+    WickedPdf.new.pdf_from_string(
+       render_to_string(pdf: 'vale', template: 'application_mailer/bonus.html.erb', layout: 'layouts/mail_pdf.pdf.erb'), {  }
     )
     mail(to: user_emails, subject: email_subject)
   end

@@ -13820,3 +13820,1036 @@ DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. U
   Rendered application_mailer/patagonia_users.html.erb (1.0ms)
 
 ApplicationMailer#patagonia_users: processed outbound mail in 429.5ms
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 17:12:58 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (12.6ms)
+  Rendered users/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 5094ms (Views: 5057.5ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/assets/bootstrap-datepicker.self-73e0b1c3ef6387a293396061f474c75d0977eb11cfa757cd9e46fd488c5614ff.css?body=1" for 127.0.0.1 at 2016-06-16 17:13:04 -0300
+
+
+Started GET "/assets/scaffolds.self-4e843f1e33cf9b1b436d84d595fc9016fcb2bfa585d53323bf05be101aefc792.css?body=1" for 127.0.0.1 at 2016-06-16 17:13:04 -0300
+
+
+Started GET "/assets/sweetalert.self-93ae81483be2e9705db4cd911fa410bc2cf6c24f355dc5ac899de49fab854e63.css?body=1" for 127.0.0.1 at 2016-06-16 17:13:04 -0300
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-06-16 17:13:04 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-06-16 17:13:04 -0300
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2016-06-16 17:13:04 -0300
+
+
+Started GET "/assets/application.self-c03981b98f6fc964fb28cc82790af8e38e265aac50366d88cef89411fb22f4f4.css?body=1" for 127.0.0.1 at 2016-06-16 17:13:04 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-06-16 17:13:04 -0300
+
+
+Started GET "/assets/bootstrap-datepicker.min.self-7ce41c707010697e2dea11b26b790797f1435723270a6f10e09be2ddfbfe8c51.js?body=1" for 127.0.0.1 at 2016-06-16 17:13:04 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-06-16 17:13:04 -0300
+
+
+Started GET "/assets/sweetalert.min.self-f1de35952d4e269b45e3a6c390445bf2a3b4b643b69a5de4bb63790e7ca1d1b9.js?body=1" for 127.0.0.1 at 2016-06-16 17:13:04 -0300
+
+
+Started GET "/assets/users.self-ced8760f1ac1f9e49c6631021f32eac839c0304fc2f09415949226850c6d7894.js?body=1" for 127.0.0.1 at 2016-06-16 17:13:04 -0300
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-06-16 17:13:04 -0300
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:13:23 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.6ms)
+  Rendered users/user_modal.js.erb (14.5ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:13:23 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"asdfadsf", "mail"=>"lburgos@onsmartway.com", "birth_date"=>"06/01/2016", "tel"=>"2342342", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (1.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgos@onsmartway.com' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  Rendered users/create.js.erb (0.6ms)
+Completed 200 OK in 171ms (Views: 10.0ms | ActiveRecord: 1.9ms)
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 43]]
+  [1m[35m (9.1ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 44]]
+  [1m[36m (7.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 45]]
+  [1m[35m (8.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 46]]
+  [1m[36m (9.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 47]]
+  [1m[35m (9.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 48]]
+  [1m[36m (9.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 49]]
+  [1m[35m (9.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 50]]
+  [1m[36m (7.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 51]]
+  [1m[35m (9.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 52]]
+  [1m[36m (9.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 53]]
+  [1m[35m (9.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 54]]
+  [1m[36m (9.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 55]]
+  [1m[35m (6.8ms)[0m  COMMIT
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 56]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 57]]
+  [1m[35m (9.7ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 58]]
+  [1m[36m (8.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 59]]
+  [1m[35m (9.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 60]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (3.5ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 61]]
+  [1m[35m (3.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 62]]
+  [1m[36m (9.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 63]]
+  [1m[35m (9.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 64]]
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 65]]
+  [1m[35m (8.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 66]]
+  [1m[36m (9.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 67]]
+  [1m[35m (8.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 68]]
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 69]]
+  [1m[35m (8.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 70]]
+  [1m[36m (10.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 71]]
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 72]]
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:13:51 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:13:51 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"adf", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/10/2016", "tel"=>"23423", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (45.9ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "adf"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/10/2016"], ["tel", 23423], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:13:51.805461"], ["updated_at", "2016-06-16 20:13:51.805461"]]
+  [1m[35m (18.2ms)[0m  COMMIT
+  [1m[36mBonusCode Load (45.5ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+  Rendered application_mailer/patagonia_bonus.html.erb (5.2ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 230.2ms
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3[0m  [["code", 29], ["updated_at", "2016-06-16 20:13:56.767253"], ["id", 1]]
+  [1m[35m (14.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 5024ms (ActiveRecord: 131.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 17:13:56 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (2.5ms)
+  Rendered users/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 73]]
+  [1m[36m (144.6ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:14:35 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:14:35 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"dfgdfg", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/02/2016", "tel"=>"2423423", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "dfgdfg"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/02/2016"], ["tel", 2423423], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:14:35.758239"], ["updated_at", "2016-06-16 20:14:35.758239"]]
+  [1m[35m (13.0ms)[0m  COMMIT
+  [1m[36mBonusCode Load (0.7ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+  Rendered application_mailer/patagonia_bonus.html.erb (2.6ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 11.3ms
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3[0m  [["code", 30], ["updated_at", "2016-06-16 20:14:40.220968"], ["id", 1]]
+  [1m[35m (17.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 4492ms (ActiveRecord: 34.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 17:14:40 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (1.2ms)
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 74]]
+  [1m[36m (15.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users"
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:17:01 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:17:01 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"sdfsdf", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/03/2016", "tel"=>"234234", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "sdfsdf"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/03/2016"], ["tel", 234234], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:17:01.103194"], ["updated_at", "2016-06-16 20:17:01.103194"]]
+  [1m[35m (12.7ms)[0m  COMMIT
+  [1m[36mBonusCode Load (0.3ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+  Rendered application_mailer/bonus.html.erb within layouts/mail_pdf.pdf.erb (1.6ms)
+  Rendered application_mailer/patagonia_bonus.html.erb (0.4ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 1810.0ms
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3[0m  [["code", 31], ["updated_at", "2016-06-16 20:17:10.405803"], ["id", 1]]
+  [1m[35m (18.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 9346ms (ActiveRecord: 38.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 17:17:10 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 75]]
+  [1m[35m (18.2ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:18:55 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.4ms)
+  Rendered users/user_modal.js.erb (4.0ms)
+Completed 200 OK in 19ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:18:56 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"sadfads", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"07/01/2016", "tel"=>"234234", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "sadfads"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "07/01/2016"], ["tel", 234234], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:18:56.151528"], ["updated_at", "2016-06-16 20:18:56.151528"]]
+  [1m[36m (6.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mBonusCode Load (0.7ms)[0m  SELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1
+  Rendered application_mailer/bonus.html.erb within layouts/mail_pdf.pdf.erb (214.4ms)
+  Rendered application_mailer/patagonia_bonus.html.erb (7.6ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 2246.7ms
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3  [["code", 32], ["updated_at", "2016-06-16 20:19:04.832289"], ["id", 1]]
+  [1m[36m (15.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 8746ms (ActiveRecord: 31.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 17:19:04 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (8.4ms)
+  Rendered users/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 144ms (Views: 142.7ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 76]]
+  [1m[35m (13.7ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:20:58 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:20:58 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"dfasdf", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"07/14/2016", "tel"=>"234324", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "dfasdf"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "07/14/2016"], ["tel", 234324], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:20:58.812700"], ["updated_at", "2016-06-16 20:20:58.812700"]]
+  [1m[36m (11.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mBonusCode Load (0.9ms)[0m  SELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1
+  Rendered application_mailer/bonus.html.erb within layouts/mail_pdf.pdf.erb (1.2ms)
+  Rendered application_mailer/patagonia_bonus.html.erb (5.0ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 1812.1ms
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3  [["code", 33], ["updated_at", "2016-06-16 20:21:07.783706"], ["id", 1]]
+  [1m[36m (13.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 9011ms (ActiveRecord: 33.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 17:21:07 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 42ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 77]]
+  [1m[35m (16.1ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:23:05 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (1.1ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:23:05 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"assdf", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"07/15/2016", "tel"=>"234324", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "assdf"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "07/15/2016"], ["tel", 234324], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:23:05.732140"], ["updated_at", "2016-06-16 20:23:05.732140"]]
+  [1m[36m (12.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mBonusCode Load (0.5ms)[0m  SELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1
+  Rendered application_mailer/bonus.html.erb within layouts/mail_pdf.pdf.erb (1.2ms)
+  Rendered application_mailer/patagonia_bonus.html.erb (4.9ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 1733.6ms
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3  [["code", 34], ["updated_at", "2016-06-16 20:23:13.378774"], ["id", 1]]
+  [1m[36m (7.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 7676ms (ActiveRecord: 27.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 17:23:13 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (2.7ms)
+  Rendered users/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 78]]
+  [1m[35m (15.9ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:25:17 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.2ms)
+  Rendered users/user_modal.js.erb (1.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:25:17 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"ddfgdf", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/25/2016", "tel"=>"1232", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "ddfgdf"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/25/2016"], ["tel", 1232], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:25:17.736242"], ["updated_at", "2016-06-16 20:25:17.736242"]]
+  [1m[36m (17.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mBonusCode Load (1.2ms)[0m  SELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1
+  Rendered application_mailer/bonus.html.erb within layouts/mail_pdf.pdf.erb (1.6ms)
+  Rendered application_mailer/patagonia_bonus.html.erb (14.0ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 1667.2ms
+Completed 500 Internal Server Error in 1731ms (ActiveRecord: 27.9ms)
+
+ActionView::Template::Error (undefined method `url' for nil:NilClass):
+     8: <h3>
+     9:   Gracias por registrarte en Patagonia, te esperamos en nuestra Casa cuando vos elijas!
+    10: </h3>
+    11: <%= wicked_pdf_image_tag attachments['vale.jpg'].url %>
+    12: </body>
+    13: </html>
+  app/views/application_mailer/patagonia_bonus.html.erb:11:in `_app_views_application_mailer_patagonia_bonus_html_erb___704263467__639600838'
+  app/mailers/application_mailer.rb:9:in `patagonia_bonus'
+  app/controllers/users_controller.rb:35:in `create'
+
+
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.7ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (17.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 79]]
+  [1m[35m (19.7ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:26:36 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (1.2ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:26:36 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"asdasd", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/16/2016", "tel"=>"234234", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "asdasd"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/16/2016"], ["tel", 234234], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:26:36.326189"], ["updated_at", "2016-06-16 20:26:36.326189"]]
+  [1m[35m (15.2ms)[0m  COMMIT
+  [1m[36mBonusCode Load (0.5ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+  Rendered application_mailer/bonus.html.erb within layouts/mail_pdf.pdf.erb (4.8ms)
+  Rendered application_mailer/patagonia_bonus.html.erb (8.3ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 1740.8ms
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3[0m  [["code", 35], ["updated_at", "2016-06-16 20:26:44.549789"], ["id", 1]]
+  [1m[35m (11.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 8246ms (ActiveRecord: 30.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 17:26:44 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 80]]
+  [1m[35m (18.0ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:31:34 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.2ms)
+  Rendered users/user_modal.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:31:34 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"asdasd", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/24/2016", "tel"=>"234324", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "asdasd"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/24/2016"], ["tel", 234324], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:31:34.163413"], ["updated_at", "2016-06-16 20:31:34.163413"]]
+  [1m[35m (19.1ms)[0m  COMMIT
+  [1m[36mBonusCode Load (0.5ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+  Rendered application_mailer/bonus.html.erb within layouts/mail_pdf.pdf.erb (1.3ms)
+  Rendered application_mailer/patagonia_bonus.html.erb (7.3ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 25.7ms
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3[0m  [["code", 36], ["updated_at", "2016-06-16 20:31:38.825190"], ["id", 1]]
+  [1m[35m (10.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 4693ms (ActiveRecord: 38.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 17:31:38 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 81]]
+  [1m[35m (12.0ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:37:05 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:37:05 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"sdfsdf", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/23/2016", "tel"=>"34234", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "sdfsdf"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/23/2016"], ["tel", 34234], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:37:05.899455"], ["updated_at", "2016-06-16 20:37:05.899455"]]
+  [1m[35m (12.3ms)[0m  COMMIT
+  [1m[36mBonusCode Load (0.4ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 0.5ms
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 18.3ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - vale.jpg):
+  app/mailers/application_mailer.rb:6:in `read'
+  app/mailers/application_mailer.rb:6:in `patagonia_bonus'
+  app/controllers/users_controller.rb:35:in `create'
+
+
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.6ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.3ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (34.2ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 82]]
+  [1m[35m (15.1ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:38:51 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.9ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:38:51 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"asda", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/24/2016", "tel"=>"23423", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "asda"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/24/2016"], ["tel", 23423], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:38:51.416626"], ["updated_at", "2016-06-16 20:38:51.416626"]]
+  [1m[36m (16.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mBonusCode Load (0.8ms)[0m  SELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 0.9ms
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 23.1ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - "#{Rails.root}/assets/images/vale.jpg):
+  app/mailers/application_mailer.rb:6:in `read'
+  app/mailers/application_mailer.rb:6:in `patagonia_bonus'
+  app/controllers/users_controller.rb:35:in `create'
+
+
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (22.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 83]]
+  [1m[35m (17.4ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:39:46 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:39:46 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"adsasd", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/10/2016", "tel"=>"34234", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "adsasd"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/10/2016"], ["tel", 34234], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:39:46.195687"], ["updated_at", "2016-06-16 20:39:46.195687"]]
+  [1m[35m (13.9ms)[0m  COMMIT
+  [1m[36mBonusCode Load (0.3ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 0.6ms
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 19.1ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - "#{Rails.root}/app/assets/images/vale.jpg):
+  app/mailers/application_mailer.rb:6:in `read'
+  app/mailers/application_mailer.rb:6:in `patagonia_bonus'
+  app/controllers/users_controller.rb:35:in `create'
+
+
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (22.1ms)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 84]]
+  [1m[35m (19.8ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:41:48 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:41:48 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"adasd", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/17/2016", "tel"=>"234234", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "adasd"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/17/2016"], ["tel", 234234], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:41:48.628962"], ["updated_at", "2016-06-16 20:41:48.628962"]]
+  [1m[36m (12.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mBonusCode Load (0.3ms)[0m  SELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 0.7ms
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 18.7ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - #{Rails.root}/app/assets/images/vale.jpg):
+  app/mailers/application_mailer.rb:7:in `read'
+  app/mailers/application_mailer.rb:7:in `patagonia_bonus'
+  app/controllers/users_controller.rb:35:in `create'
+
+
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (21.5ms)
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (2.0ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 85]]
+  [1m[35m (12.0ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:42:25 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:42:25 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"asdasd", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/10/2016", "tel"=>"23432", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "asdasd"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/10/2016"], ["tel", 23432], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:42:25.158311"], ["updated_at", "2016-06-16 20:42:25.158311"]]
+  [1m[35m (15.9ms)[0m  COMMIT
+  [1m[36mBonusCode Load (0.4ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+  Rendered application_mailer/patagonia_bonus.html.erb (7.9ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 21.5ms
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3[0m  [["code", 37], ["updated_at", "2016-06-16 20:42:30.961496"], ["id", 1]]
+  [1m[35m (21.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 5853ms (ActiveRecord: 44.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 17:42:31 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 86]]
+  [1m[35m (15.6ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:43:13 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:43:14 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"sdad", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/10/2016", "tel"=>"432423", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "sdad"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/10/2016"], ["tel", 432423], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:43:14.024409"], ["updated_at", "2016-06-16 20:43:14.024409"]]
+  [1m[35m (15.3ms)[0m  COMMIT
+  [1m[36mBonusCode Load (0.6ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+  Rendered application_mailer/patagonia_bonus.html.erb (5.5ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 19.0ms
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3[0m  [["code", 38], ["updated_at", "2016-06-16 20:43:19.651606"], ["id", 1]]
+  [1m[35m (32.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 5667ms (ActiveRecord: 50.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 17:43:19 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 87]]
+  [1m[35m (18.4ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:56:28 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:56:28 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"dfdsf", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/02/2016", "tel"=>"234", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "dfdsf"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/02/2016"], ["tel", 234], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:56:28.640847"], ["updated_at", "2016-06-16 20:56:28.640847"]]
+  [1m[35m (21.4ms)[0m  COMMIT
+  [1m[36mBonusCode Load (0.3ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+  Rendered application_mailer/bonus.html.erb within layouts/mail_pdf.pdf.erb (1.2ms)
+  Rendered application_mailer/patagonia_bonus.html.erb (4.8ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 1720.0ms
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3[0m  [["code", 39], ["updated_at", "2016-06-16 20:56:37.150215"], ["id", 1]]
+  [1m[35m (33.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 8567ms (ActiveRecord: 62.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 17:56:37 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 46ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 88]]
+  [1m[35m (41.2ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:57:12 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.2ms)
+  Rendered users/user_modal.js.erb (0.9ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:57:12 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"sad", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/09/2016", "tel"=>"234", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "sad"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/09/2016"], ["tel", 234], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:57:12.219878"], ["updated_at", "2016-06-16 20:57:12.219878"]]
+  [1m[35m (20.3ms)[0m  COMMIT
+  [1m[36mBonusCode Load (1.1ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+  Rendered application_mailer/bonus.html.erb within layouts/mail_pdf.pdf.erb (1.1ms)
+  Rendered application_mailer/patagonia_bonus.html.erb (5.5ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 1747.8ms
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3[0m  [["code", 40], ["updated_at", "2016-06-16 20:57:20.543487"], ["id", 1]]
+  [1m[35m (17.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 8372ms (ActiveRecord: 48.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 17:57:20 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 89]]
+  [1m[35m (16.1ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:58:09 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 17:58:12 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 17:58:12 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"sdfsd", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/17/2016", "tel"=>"234324", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "sdfsd"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/17/2016"], ["tel", 234324], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 20:58:12.930262"], ["updated_at", "2016-06-16 20:58:12.930262"]]
+  [1m[35m (9.1ms)[0m  COMMIT
+  [1m[36mBonusCode Load (0.8ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+  Rendered application_mailer/bonus.html.erb within layouts/mail_pdf.pdf.erb (1.4ms)
+  Rendered application_mailer/patagonia_bonus.html.erb (0.6ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 1661.7ms
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3[0m  [["code", 41], ["updated_at", "2016-06-16 20:58:21.056625"], ["id", 1]]
+  [1m[35m (16.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 8166ms (ActiveRecord: 32.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 17:58:21 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (1.5ms)
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 49ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 90]]
+  [1m[35m (9.8ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 18:00:18 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 18:00:18 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"asdasd", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/02/2016", "tel"=>"2342", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "asdasd"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/02/2016"], ["tel", 2342], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 21:00:18.609308"], ["updated_at", "2016-06-16 21:00:18.609308"]]
+  [1m[35m (17.5ms)[0m  COMMIT
+  [1m[36mBonusCode Load (0.6ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+  Rendered application_mailer/bonus.html.erb within layouts/mail_pdf.pdf.erb (1.2ms)
+  Rendered application_mailer/patagonia_bonus.html.erb (5.7ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 1752.0ms
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3[0m  [["code", 42], ["updated_at", "2016-06-16 21:00:27.062196"], ["id", 1]]
+  [1m[35m (18.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 8498ms (ActiveRecord: 44.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 18:00:27 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 91]]
+  [1m[35m (13.6ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 18:13:21 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.4ms)
+  Rendered users/user_modal.js.erb (3.0ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 18:13:21 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"we", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/23/2016", "tel"=>"2323", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "we"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/23/2016"], ["tel", 2323], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 21:13:21.540285"], ["updated_at", "2016-06-16 21:13:21.540285"]]
+  [1m[35m (20.9ms)[0m  COMMIT
+  [1m[36mBonusCode Load (0.4ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+  Rendered application_mailer/bonus.html.erb within layouts/mail_pdf.pdf.erb (2.0ms)
+  Rendered application_mailer/patagonia_bonus.html.erb (7.1ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 1745.2ms
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3[0m  [["code", 43], ["updated_at", "2016-06-16 21:13:29.829162"], ["id", 1]]
+  [1m[35m (20.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 8320ms (ActiveRecord: 44.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 18:13:29 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (1.4ms)
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 92]]
+  [1m[35m (14.7ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 18:35:20 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.9ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 18:35:20 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"sdf", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/14/2016", "tel"=>"23423", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "sdf"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/14/2016"], ["tel", 23423], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 21:35:20.189342"], ["updated_at", "2016-06-16 21:35:20.189342"]]
+  [1m[35m (10.2ms)[0m  COMMIT
+  [1m[36mBonusCode Load (1.3ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 1.8ms
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 17.7ms)
+
+NameError (uninitialized constant ApplicationMailer::IMGKit):
+  app/mailers/application_mailer.rb:7:in `patagonia_bonus'
+  app/controllers/users_controller.rb:35:in `create'
+
+
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (22.1ms)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 93]]
+  [1m[35m (44.6ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 18:36:35 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 18:36:35 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"sdf", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/11/2016", "tel"=>"23423", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "sdf"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/11/2016"], ["tel", 23423], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 21:36:35.606079"], ["updated_at", "2016-06-16 21:36:35.606079"]]
+  [1m[36m (15.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mBonusCode Load (1.1ms)[0m  SELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 2.2ms
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 25.8ms)
+
+NameError (uninitialized constant ApplicationMailer::IMGKit):
+  app/mailers/application_mailer.rb:7:in `patagonia_bonus'
+  app/controllers/users_controller.rb:35:in `create'
+
+
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (22.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 94]]
+  [1m[35m (12.4ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 18:39:46 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.5ms)
+  Rendered users/user_modal.js.erb (4.4ms)
+Completed 200 OK in 20ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 18:39:46 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"werew", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/28/2016", "tel"=>"234234", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "werew"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/28/2016"], ["tel", 234234], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 21:39:46.612930"], ["updated_at", "2016-06-16 21:39:46.612930"]]
+  [1m[36m (13.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mBonusCode Load (1.8ms)[0m  SELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 740.3ms
+Completed 500 Internal Server Error in 809ms (ActiveRecord: 24.3ms)
+
+NoMethodError (undefined method `length' for #<IMGKit:0xa4ad3b4>):
+  app/mailers/application_mailer.rb:8:in `patagonia_bonus'
+  app/controllers/users_controller.rb:35:in `create'
+
+
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (20.8ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 95]]
+  [1m[35m (7.0ms)[0m  COMMIT
+
+
+Started GET "/users/user_modal" for 127.0.0.1 at 2016-06-16 18:41:20 -0300
+Processing by UsersController#user_modal as JS
+  Rendered users/_new_client_modal.html.erb (0.1ms)
+  Rendered users/user_modal.js.erb (0.9ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-16 18:41:20 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"", "user"=>{"name"=>"dsfdsf", "mail"=>"lburgosabal@gmail.com", "birth_date"=>"06/11/2016", "tel"=>"23432", "return_rate"=>"5", "recommendation_rate"=>"5", "suggestions"=>""}}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."mail" = 'lburgosabal@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "mail", "birth_date", "tel", "return_rate", "recommendation_rate", "suggestions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "dsfdsf"], ["mail", "lburgosabal@gmail.com"], ["birth_date", "06/11/2016"], ["tel", 23432], ["return_rate", 5], ["recommendation_rate", 5], ["suggestions", ""], ["created_at", "2016-06-16 21:41:20.091572"], ["updated_at", "2016-06-16 21:41:20.091572"]]
+  [1m[35m (15.6ms)[0m  COMMIT
+  [1m[36mBonusCode Load (0.4ms)[0m  [1mSELECT  "bonus_codes".* FROM "bonus_codes"  ORDER BY "bonus_codes"."id" ASC LIMIT 1[0m
+  Rendered application_mailer/bonus.html.erb within layouts/mail_pdf.pdf.erb (185.0ms)
+  Rendered application_mailer/patagonia_bonus.html.erb (0.4ms)
+
+ApplicationMailer#patagonia_bonus: processed outbound mail in 1971.2ms
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "bonus_codes" SET "code" = $1, "updated_at" = $2 WHERE "bonus_codes"."id" = $3[0m  [["code", 44], ["updated_at", "2016-06-16 21:41:28.735737"], ["id", 1]]
+  [1m[35m (19.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 8693ms (ActiveRecord: 44.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-16 18:41:28 -0300
+Processing by UsersController#new as JS
+  Rendered users/_form.html.erb (10.9ms)
+  Rendered users/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 159ms (Views: 157.3ms | ActiveRecord: 0.0ms)
