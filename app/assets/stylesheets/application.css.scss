@@ -214,6 +214,10 @@ td span{
   color: black!important;
 }
 
+.instagram-div{
+  padding-left: 10%;
+}
+
 @media screen and (max-width: 1280px) {
   .option{
     margin:0%;
@@ -227,6 +231,13 @@ td span{
   }
   hr{
     margin-bottom: 8%!important;
+  }
+
+  .instagram-div{
+    padding-left: 5%;
+  }
+  .instagram{
+    width:80%
   }
 }
 
