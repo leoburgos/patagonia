@@ -8,18 +8,20 @@ $(document).ready ->
 
 
   $('.box1 .option').click ->
+    event.preventDefault();
     if !($(this).hasClass('active'))
       $('.box1 .option').removeClass('active')
       $(this).addClass('active')
       $('#user_return_rate').val($(this).text())
-    return
+    return false
 
   $('.box2 .option').click ->
+    event.preventDefault();
     if !($(this).hasClass('active'))
       $('.box2 .option').removeClass('active')
       $(this).addClass('active')
       $('#user_recommendation_rate').val($(this).text())
-    return
+    return false
 
   $(document).on 'click', '.cancel-links', ->
     $('#new_user').fadeIn();
