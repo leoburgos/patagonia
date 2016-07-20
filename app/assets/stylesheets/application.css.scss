@@ -54,6 +54,7 @@ label{
   height: 180px;
   background-image: asset_data_url("logo_patagonia.png");
   padding-left: 0px!important;
+  background-position-x: center;
 }
 .footer-logo{
   height: 300px;
@@ -102,7 +103,7 @@ hr{
 
 .form-label{
   color: white;
-  width: 48%;
+  //width: 48%;
 }
 
 .message{
@@ -131,7 +132,7 @@ hr{
 }
 
 .options-box{
-  width: 48%;
+  //width: 48%;
   display: inline-block;
 }
 
@@ -216,6 +217,10 @@ td span{
 @media screen and (max-width: 1280px) {
   .option{
     margin:0.7%;
+  }
+
+  .option-date{
+    width: 20%;
   }
 }
 
