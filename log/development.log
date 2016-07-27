@@ -17267,3 +17267,163 @@ Started GET "/" for 127.0.0.1 at 2016-07-27 13:15:38 -0300
 Processing by UsersController#index as HTML
   Rendered users/index.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 14:30:13 -0300
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 2279ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'logo_2.jpg'):
+    2: <html>
+    3: <head>
+    4:   <title>Patagonia</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    8:   <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___154215416__637063558'
+
+
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.6ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.5ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.5ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (72.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 14:30:17 -0300
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 734ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'logo_2.jpg'):
+    2: <html>
+    3: <head>
+    4:   <title>Patagonia</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    8:   <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___154215416__637063558'
+
+
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.4ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.9ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.9ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 14:30:32 -0300
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2381ms (Views: 2380.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e7f5e7fdad8f84e3aac37b461923886f50a27eba03353885e36877f750259500.css?body=1" for 127.0.0.1 at 2016-07-27 14:30:35 -0300
+
+
+Started GET "/assets/bootstrap-datepicker.self-73e0b1c3ef6387a293396061f474c75d0977eb11cfa757cd9e46fd488c5614ff.css?body=1" for 127.0.0.1 at 2016-07-27 14:30:35 -0300
+
+
+Started GET "/assets/scaffolds.self-4e843f1e33cf9b1b436d84d595fc9016fcb2bfa585d53323bf05be101aefc792.css?body=1" for 127.0.0.1 at 2016-07-27 14:30:35 -0300
+
+
+Started GET "/assets/sweetalert.self-93ae81483be2e9705db4cd911fa410bc2cf6c24f355dc5ac899de49fab854e63.css?body=1" for 127.0.0.1 at 2016-07-27 14:30:35 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-27 14:30:35 -0300
+
+
+Started GET "/assets/users.self-fef20cbb43a0f2a89498239f642aec1335fd9f88f5ad4f034ebad1ba78e9d608.css?body=1" for 127.0.0.1 at 2016-07-27 14:30:35 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-27 14:30:35 -0300
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2016-07-27 14:30:35 -0300
+
+
+Started GET "/assets/bootstrap-datepicker.min.self-7ce41c707010697e2dea11b26b790797f1435723270a6f10e09be2ddfbfe8c51.js?body=1" for 127.0.0.1 at 2016-07-27 14:30:35 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-07-27 14:30:35 -0300
+
+
+Started GET "/assets/sweetalert.min.self-f1de35952d4e269b45e3a6c390445bf2a3b4b643b69a5de4bb63790e7ca1d1b9.js?body=1" for 127.0.0.1 at 2016-07-27 14:30:35 -0300
+
+
+Started GET "/assets/users.self-253b0d9037d48d05184367a2b69be30f94b50b36d659e6add6fbafef54f511a7.js?body=1" for 127.0.0.1 at 2016-07-27 14:30:35 -0300
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-07-27 14:30:35 -0300
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-27 14:32:40 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.9ms)
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 140ms (Views: 138.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-ae20b3f632f72b212be10f3d06176d5c05ddbffef23426041c410f0b547a3842.css?body=1" for 127.0.0.1 at 2016-07-27 14:32:40 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 14:35:06 -0300
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-datepicker.self-73e0b1c3ef6387a293396061f474c75d0977eb11cfa757cd9e46fd488c5614ff.css?body=1" for 127.0.0.1 at 2016-07-27 14:35:07 -0300
+
+
+Started GET "/assets/sweetalert.self-93ae81483be2e9705db4cd911fa410bc2cf6c24f355dc5ac899de49fab854e63.css?body=1" for 127.0.0.1 at 2016-07-27 14:35:07 -0300
+
+
+Started GET "/assets/scaffolds.self-4e843f1e33cf9b1b436d84d595fc9016fcb2bfa585d53323bf05be101aefc792.css?body=1" for 127.0.0.1 at 2016-07-27 14:35:07 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-27 14:35:07 -0300
+
+
+Started GET "/assets/application.self-ae20b3f632f72b212be10f3d06176d5c05ddbffef23426041c410f0b547a3842.css?body=1" for 127.0.0.1 at 2016-07-27 14:35:07 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-27 14:35:07 -0300
+
+
+Started GET "/assets/users.self-fef20cbb43a0f2a89498239f642aec1335fd9f88f5ad4f034ebad1ba78e9d608.css?body=1" for 127.0.0.1 at 2016-07-27 14:35:07 -0300
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2016-07-27 14:35:07 -0300
+
+
+Started GET "/assets/bootstrap-datepicker.min.self-7ce41c707010697e2dea11b26b790797f1435723270a6f10e09be2ddfbfe8c51.js?body=1" for 127.0.0.1 at 2016-07-27 14:35:07 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-07-27 14:35:07 -0300
+
+
+Started GET "/assets/sweetalert.min.self-f1de35952d4e269b45e3a6c390445bf2a3b4b643b69a5de4bb63790e7ca1d1b9.js?body=1" for 127.0.0.1 at 2016-07-27 14:35:07 -0300
+
+
+Started GET "/assets/users.self-253b0d9037d48d05184367a2b69be30f94b50b36d659e6add6fbafef54f511a7.js?body=1" for 127.0.0.1 at 2016-07-27 14:35:07 -0300
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-07-27 14:35:07 -0300

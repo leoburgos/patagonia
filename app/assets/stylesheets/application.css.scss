@@ -52,9 +52,11 @@ label{
 
 .header-logo{
   height: 180px;
-  background-image: asset_data_url("logo_2.jpg");
+  background-image: asset_data_url("logo_2.png");
   padding-left: 0px!important;
   background-position-x: center;
+  background-position-y: center;
+
 }
 .footer-logo{
   height: 300px;
