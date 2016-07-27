@@ -239,7 +239,13 @@ td span{
     padding-left: 5%;
   }
   .instagram{
-    width:78%
+    width:58%
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .instagram {
+    width: 78%
   }
 }
 

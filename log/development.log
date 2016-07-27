@@ -17506,3 +17506,155 @@ Processing by UsersController#new as HTML
   Rendered users/_form.html.erb (2.0ms)
   Rendered users/new.html.erb within layouts/application (2.8ms)
 Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-27 15:59:30 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.9ms)
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 4137ms (Views: 4136.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-datepicker.self-73e0b1c3ef6387a293396061f474c75d0977eb11cfa757cd9e46fd488c5614ff.css?body=1" for 127.0.0.1 at 2016-07-27 15:59:34 -0300
+
+
+Started GET "/assets/scaffolds.self-4e843f1e33cf9b1b436d84d595fc9016fcb2bfa585d53323bf05be101aefc792.css?body=1" for 127.0.0.1 at 2016-07-27 15:59:34 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-27 15:59:34 -0300
+
+
+Started GET "/assets/sweetalert.self-93ae81483be2e9705db4cd911fa410bc2cf6c24f355dc5ac899de49fab854e63.css?body=1" for 127.0.0.1 at 2016-07-27 15:59:34 -0300
+
+
+Started GET "/assets/application.self-b2758a3e94d9e964c856403ea2b91b2d6be55da0495c6e8206c160e6d9d43472.css?body=1" for 127.0.0.1 at 2016-07-27 15:59:34 -0300
+
+
+Started GET "/assets/users.self-fef20cbb43a0f2a89498239f642aec1335fd9f88f5ad4f034ebad1ba78e9d608.css?body=1" for 127.0.0.1 at 2016-07-27 15:59:34 -0300
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2016-07-27 15:59:34 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-27 15:59:34 -0300
+
+
+Started GET "/assets/bootstrap-datepicker.min.self-7ce41c707010697e2dea11b26b790797f1435723270a6f10e09be2ddfbfe8c51.js?body=1" for 127.0.0.1 at 2016-07-27 15:59:34 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-07-27 15:59:34 -0300
+
+
+Started GET "/assets/sweetalert.min.self-f1de35952d4e269b45e3a6c390445bf2a3b4b643b69a5de4bb63790e7ca1d1b9.js?body=1" for 127.0.0.1 at 2016-07-27 15:59:34 -0300
+
+
+Started GET "/assets/users.self-253b0d9037d48d05184367a2b69be30f94b50b36d659e6add6fbafef54f511a7.js?body=1" for 127.0.0.1 at 2016-07-27 15:59:34 -0300
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-07-27 15:59:34 -0300
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-27 16:00:09 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.2ms)
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 101ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-27 16:00:23 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.4ms)
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 79ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-27 16:01:43 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after "}": expected "}", was ""):
+    2: <html>
+    3: <head>
+    4:   <title>Patagonia</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    8:   <%= csrf_meta_tags %>
+  app/assets/stylesheets/application.css.scss:259
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___835709997_86287640'
+
+
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.8ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.1ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (156.4ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /home/leo/.rvm/gems/ruby-head/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (187.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-27 16:01:53 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.4ms)
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 2435ms (Views: 2434.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-datepicker.self-73e0b1c3ef6387a293396061f474c75d0977eb11cfa757cd9e46fd488c5614ff.css?body=1" for 127.0.0.1 at 2016-07-27 16:01:56 -0300
+
+
+Started GET "/assets/users.self-fef20cbb43a0f2a89498239f642aec1335fd9f88f5ad4f034ebad1ba78e9d608.css?body=1" for 127.0.0.1 at 2016-07-27 16:01:56 -0300
+
+
+Started GET "/assets/scaffolds.self-4e843f1e33cf9b1b436d84d595fc9016fcb2bfa585d53323bf05be101aefc792.css?body=1" for 127.0.0.1 at 2016-07-27 16:01:56 -0300
+
+
+Started GET "/assets/sweetalert.self-93ae81483be2e9705db4cd911fa410bc2cf6c24f355dc5ac899de49fab854e63.css?body=1" for 127.0.0.1 at 2016-07-27 16:01:56 -0300
+
+
+Started GET "/assets/application.self-42032be2e9f3cb705d0982526b9a31123aa26f7c25d55d5a6b435d23d7f7e9b4.css?body=1" for 127.0.0.1 at 2016-07-27 16:01:56 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-27 16:01:56 -0300
+
+
+Started GET "/assets/sweetalert.min.self-f1de35952d4e269b45e3a6c390445bf2a3b4b643b69a5de4bb63790e7ca1d1b9.js?body=1" for 127.0.0.1 at 2016-07-27 16:01:56 -0300
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2016-07-27 16:01:56 -0300
+
+
+Started GET "/assets/bootstrap-datepicker.min.self-7ce41c707010697e2dea11b26b790797f1435723270a6f10e09be2ddfbfe8c51.js?body=1" for 127.0.0.1 at 2016-07-27 16:01:56 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-07-27 16:01:56 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-27 16:01:56 -0300
+
+
+Started GET "/assets/users.self-253b0d9037d48d05184367a2b69be30f94b50b36d659e6add6fbafef54f511a7.js?body=1" for 127.0.0.1 at 2016-07-27 16:01:56 -0300
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-07-27 16:01:56 -0300
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-27 16:02:07 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 55ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-27 16:02:18 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.3ms)
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.0ms)
