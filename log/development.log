@@ -17427,3 +17427,39 @@ Started GET "/assets/users.self-253b0d9037d48d05184367a2b69be30f94b50b36d659e6ad
 
 
 Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-07-27 14:35:07 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 15:47:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 6744ms (Views: 6720.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 15:47:22 -0300
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 49ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-527d43ddc29587bd1f87b66ae508103e074c430bd551972d90355c01d418bc0a.css?body=1" for 127.0.0.1 at 2016-07-27 15:47:22 -0300
+
+
+Started GET "/users/set_date?year=1111&month=12&day=12" for 127.0.0.1 at 2016-07-27 15:47:32 -0300
+Processing by UsersController#set_date as */*
+  Parameters: {"year"=>"1111", "month"=>"12", "day"=>"12"}
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-27 15:47:32 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (133.5ms)
+  Rendered users/new.html.erb within layouts/application (148.3ms)
+Completed 200 OK in 290ms (Views: 258.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 15:47:56 -0300
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 50ms (Views: 49.6ms | ActiveRecord: 0.0ms)
