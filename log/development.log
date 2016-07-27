@@ -17463,3 +17463,46 @@ Started GET "/" for 127.0.0.1 at 2016-07-27 15:47:56 -0300
 Processing by UsersController#index as HTML
   Rendered users/index.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 50ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 15:54:12 -0300
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 4507ms (Views: 4506.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 15:54:17 -0300
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 95ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b2758a3e94d9e964c856403ea2b91b2d6be55da0495c6e8206c160e6d9d43472.css?body=1" for 127.0.0.1 at 2016-07-27 15:54:17 -0300
+
+
+Started GET "/users/set_date?year=1111&month=12&day=12" for 127.0.0.1 at 2016-07-27 15:54:23 -0300
+Processing by UsersController#set_date as */*
+  Parameters: {"year"=>"1111", "month"=>"12", "day"=>"12"}
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-27 15:54:23 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.5ms)
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-27 15:54:30 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.9ms)
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 67ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-27 15:54:46 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.0ms)
