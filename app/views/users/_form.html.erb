@@ -26,6 +26,9 @@
       <li>
         <%= f.text_field :tel, placeholder: "Cel/Tel" , class: 'form-control', type: 'text', required: true %>
       </li>
+      <li>
+        <%= select_tag(:local, options_for_select(['Luis Alberto Herrera 1193', 'Mercado del Puerto']), class: 'form-control', prompt: 'Local') %>
+      </li>
       <li class="options-li">
         <label class="col-xs-12 col-sm-6 form-label">¿Volverías a Patagonia Bewing Co.? </label>
         <div class="options-box pull-right box1 col-xs-12 col-sm-6" style="padding:0px">
